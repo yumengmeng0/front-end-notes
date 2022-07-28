@@ -15,3 +15,18 @@
     ————————————————
     版权声明：本文为CSDN博主「全易」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
     原文链接：https://blog.csdn.net/qq_42618566/article/details/101752942
+
+
+
+
+## input[type=number]下禁止输入e、+、-的解决方案
+
+```html
+    onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" 
+
+    <input v-model="goPage"
+    onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" 
+    :max="9999999" type="number" placeholder="请输入"></input>
+            
+
+```
